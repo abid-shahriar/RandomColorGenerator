@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #22c59a;
+}
+
+nav {
+  height: 7rem;
+  text-align: center;
+  background-color: #eee;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.425);
+  @include flexCenter();
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+}
+
+.content {
+  height: 80vh;
+  @include flexCenter();
+  flex-direction: column;
+
+  h3 {
+    font-size: 5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-transform: capitalize;
+  }
+
+  .color-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.781);
+    font-size: 2rem;
+    font-weight: 100;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      transform: translateY(0.3rem);
+      box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.781);
+    }
+  }
+}
